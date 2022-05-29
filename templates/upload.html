@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        body {
+          background-image: url('https://i.pinimg.com/originals/75/67/60/7567600f78cdc560442d31b420d2c441.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+   <div class="container">
+      <div class="row">
+      <p>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+      </p>
+      {% if filename %}
+          <div>
+              <img src="{{ url_for('display_image', filename=filename) }}">
+          </div>
+      {% endif %}
+      <form method="POST" action="/upload" enctype="multipart/form-data">
+          <dl>
+              <p>
+                  <input type="file" name="file" value="file" id="file" class="form-control" autocomplete="off" required>
+              </p>
+          </dl>
+          <p>
+              <input type="submit" value="Submit" class="btn btn-info">
+          </p>
+      </form>
+
+</html>
+

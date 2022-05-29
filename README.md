@@ -6,14 +6,19 @@
 
 # INSTALLATION & IMPLEMENTATION
 1.Install Visual Studio Code (https://code.visualstudio.com/download).
+
 2.Install Extensions in VS Code required for python, HTML, CSS, JS.
+
 3.Create a python Virtual Environment inside this project folder using terminal.
+
 4.Install the required libraries in the virtual environment mentioned in the requirement.txt file  to run the python code without errors.
+
 5.You can change the dataset for your testing by uploading the required image in the dataset section available in the python code.
 
 # Experience the Application
 
 Run the 'app.py' file and go to the localhost server to get a feel for the project. 
+
 After successfully running the app.py file, the URL provided in the terminal can be used to access the Localhost Server.
 
 
